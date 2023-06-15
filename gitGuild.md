@@ -2,7 +2,12 @@
 **Hello anh em!**  
 <hr>  
 
-Git dùng để quản lí mã nguồn, nó lưu trữ versions của mã code thông qua những cái log mà chúng ta đã commit và giúp dễ dàng revert khi có các code lỗi.  
+Tổng quan về git:  
+
+Git dùng để quản lí mã nguồn, nó lưu trữ versions của mã code thông qua những cái log mà chúng ta đã commit và giúp dễ dàng revert khi có các code lỗi. ![alt text](./img/git.png)  
+
+Git sẽ tạo một commit đầu tiên trong lịch sử của kho lưu trữ đó. Commit này thường được gọi là "commit khởi nguyên" hoặc "commit đầu tiên". Trong Git, commit đầu tiên này thể hiện trạng thái ban đầu của dự án và chứa thông tin về thư mục và tệp tin hiện có.  
+
 
 
 __  
