@@ -31,7 +31,9 @@ Một số lệnh cơ bản thường dùng bao gồm: `git init`, `git clone`, 
 ![alt text](./img/gitflow-hotfix-branch-diagram.jpg)  
 > Tuyệt đối! các bạn không nên sửa đổi file trên nhánh Main(Master). Muốn làm feature mới thì hãy `git checkout` ra một nhánh mới rồi hẳn làm. Sau khi hoàn thành feature đó hãy merge vào nhánh Main.  
  
-Để quản lí một dự án hiệu quả PM sẽ tạo ra 5 nhánh như trình trên, mình sẽ thay thế nhánh `master` thành `main` để hợp với thuần phong mỹ tục hiện nay &#x1F600; . 
+Để quản lí một dự án hiệu quả PM sẽ tạo ra 5 nhánh như trình trên, mình sẽ thay thế nhánh `master` thành `main` để hợp với thuần phong mỹ tục hiện nay &#x1F600;.  
+
+Dùng `git init` để khởi tạo git từ nhánh `main`, bạn không nên chỉnh sửa gì lên nhánh này. Mà hãy `git checkout` ra một nhánh mới gọi là nhánh `develop`, bạn và các team member sẽ phát triển dự án lên nhánh này, và tất nhiên nhánh này bạn cũng không nên chỉnh sửa mà `git checkout` ra một nhánh khác gọi là nhánh `feature`. PM giao task cho bạn
 
 
 [Luyện Git](https://learngitbranching.js.org/)
