@@ -1,15 +1,13 @@
 ## Hướng dẫn dùng git process##  
 **Hello anh em**  
 <hr>  
-<center>
-
-Đoạn văn bản căn giữa.
-
-</center>  
+<center>Đoạn văn bản căn giữa.</center>  
 _hướng dẫn dùng git_  
 *tải git  
 `git he ge`  
+
 ![alt text](./img/gitflow-hotfix-branch-diagram.jpg)  
+
 >phan van phat  
 | ádasd |  
 
