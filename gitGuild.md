@@ -13,10 +13,19 @@ _hướng dẫn dùng git_
 
 >  
 
+_How: cách sử dụng_  
 
-| Header 1 | Header 2 |
-| --- | --- |
-| Cell 1 | Cell 2 |
+_What: nó là gì_  
+
+_When: khi nào sử dụng_  
+
+| Commands | How | What | When |
+| --- | --- | --- | --- |
+| clone | sdfsdfsdfsdfsdfsdfsdfsdf | sdfsdfsdffffffffffff | sdfsdfsdfsdfsdfsdfsdfsdfdddddđ |
+| branch | sdfsdfsfsdfsdfsdfsdf | dddddddddddddddddddddddddddd | ádasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasd |
+| Cell 1 | Cell 2 | Cell 1 | Cell 2 |
+| Cell 1 | Cell 2 | Cell 1 | Cell 2 |
+| Cell 1 | Cell 2 | Cell 1 | Cell 2 |
   
 quản lí mã
 quan trọng nhất là lưu trữ versions của code thông qua những cái log mà chúng ta đã commit và giúp dễ dàng revert các code lỗi.
