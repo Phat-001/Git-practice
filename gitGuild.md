@@ -23,6 +23,8 @@ _When: khi nào sử dụng_
 | --- | --- | --- | --- |
 | clone | sdfsdfsdfsdfsdfsdfsdfsdf | sdfsdfsdffffffffffff | sdfsdfsdfsdfsdfs  dfsdfsdfdddddđ |
 | branch | sdfsdfsfsdfsdfsdfsdf | dddddddddddddddddddddddddddd | ádasdasdasdasdasdasdasdasdasdasdasd  asdasdasdasdasdasd |
+| branch | sdfsdfsfsdfsdfsdfsdf | ddddddddddddddsdddddddddddddđ  5dddddddddddddd | ádasdasdasdasdasdasdasdasdasdasdasd  asdasdasdasdasdasd |
+| branch | sdfsdfsfsdfsdfsdfsdf | dddddddddddddddddddddddddddd | ádasdasdasdasdasdasdasdasdasdasdasd  asdasdasdasdasdasd |
 | Cell 1 | Cell 2 | Cell 1 | Cell 2 |
 | Cell 1 | Cell 2 | Cell 1 | Cell 2 |
 | Cell 1 | Cell 2 | Cell 1 | Cell 2 |
