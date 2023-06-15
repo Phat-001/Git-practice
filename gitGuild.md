@@ -1,17 +1,21 @@
-## Hướng dẫn dùng git
-**Hello anh em**  
+# Hướng Dẫn Dùng Git
+**Hello anh em!**  
 <hr>  
 <center>Đoạn văn bản căn giữa.</center>  
 
 _hướng dẫn dùng git_  
 
-*tải git  
+*tải git*  
 
 `git he ge`  
 
+
+## Git Flow  
 ![alt text](./img/gitflow-hotfix-branch-diagram.jpg)  
 
 >  
+
+### Các commands thường hay sử dụng
 
 _How: cách sử dụng_  
 
