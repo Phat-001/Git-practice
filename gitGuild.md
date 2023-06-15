@@ -14,9 +14,9 @@ _hướng dẫn dùng git_
 >  
 
 
-| <th>Header 1</th> | <th>Header 2</th> |
-| --- |
-| <td>Cell 1</td> | <td>Cell 2</td> |
+| Header 1 | Header 2 |
+| --- | --- |
+| Cell 1 | Cell 2 |
   
 quản lí mã
 quan trọng nhất là lưu trữ versions của code thông qua những cái log mà chúng ta đã commit và giúp dễ dàng revert các code lỗi.
