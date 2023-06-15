@@ -11,17 +11,11 @@ _hướng dẫn dùng git_
 
 ![alt text](./img/gitflow-hotfix-branch-diagram.jpg)  
 
->phan van phat  
-| ádasd |  
+>  
 
-<style>
-td {
-  text-align: center;
-}
-</style>
 
-| Header 1 | Header 2 |
-| --- | --- |
+| <th>Header 1</th> | <th>Header 2</th> |
+| --- |
 | <td>Cell 1</td> | <td>Cell 2</td> |
   
 quản lí mã
