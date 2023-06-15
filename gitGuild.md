@@ -1,5 +1,6 @@
-##Hướng dẫn dùng git process  
+##Hướng dẫn dùng git process##  
 **Hello anh em**  
+<hr>
 _hướng dẫn dùng git_  
 *tải git  
 `git he ge`  
@@ -7,3 +8,6 @@ _hướng dẫn dùng git_
 >phan van phat  
 | ádasd |  
 [^somenote]  
+hehe  
+
+  
