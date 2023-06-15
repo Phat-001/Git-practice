@@ -14,7 +14,15 @@ _hướng dẫn dùng git_
 >phan van phat  
 | ádasd |  
 
+<style>
+td {
+  text-align: center;
+}
+</style>
 
+| Header 1 | Header 2 |
+| --- | --- |
+| <td>Cell 1</td> | <td>Cell 2</td> |
   
 quản lí mã
 quan trọng nhất là lưu trữ versions của code thông qua những cái log mà chúng ta đã commit và giúp dễ dàng revert các code lỗi.
