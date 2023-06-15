@@ -24,12 +24,12 @@ Một số lệnh cơ bản thường dùng bao gồm: `git init`, `git clone`, 
 | `git push` | Lệnh này được sử dụng để đẩy (push) các commit đã tạo lên một kho chứa từ xa. Khi chạy `git push`, Git gửi các commit mới nhất từ nhánh hiện tại của bạn lên kho chứa từ xa để chia sẻ với người khác. |
 | `git rebase` | Lệnh trong Git được sử dụng để tái cấu trúc lịch sử commit trong một nhánh. Khi sử dụng `git rebase`, các commit trong nhánh hiện tại sẽ được chuyển đổi thành các commit mới dựa trên một commit gốc hoặc một nhánh khác. |
 
-**Lưu ý nhỏ xíu:** 
->Trước phiên bản Git 2.23, để chuyển đổi (switch) giữa các nhánh hoặc commit trong Git, người dùng thường sử dụng lệnh `git checkout`. Tuy nhiên, từ phiên bản 2.23 trở đi, Git đã giới thiệu lệnh `git switch` nhằm mục đích rõ ràng hơn và an toàn hơn cho việc chuyển đổi giữa các nhánh hoặc commit. Tên lệnh: `git switch` nghe cái tên thôi cũng đã phản ánh rõ ràng hơn về mục đích sử dụng, trong khi git checkout có nhiều mục đích hơn (như chuyển đổi nhánh, chuyển đổi commit, tạo nhánh mới, vv.), dễ gây nhầm lẫn trong việc sử dụng. Cuối cùng là Master hay chuyển thành Main.  
+**Lưu ý nhỏ xíu xiu:** 
+>Trước phiên bản Git 2.23, để chuyển đổi (switch) giữa các nhánh hoặc commit trong Git, người dùng thường sử dụng lệnh `git checkout`. Tuy nhiên, từ phiên bản 2.23 trở đi, Git đã giới thiệu lệnh `git switch` nhằm mục đích rõ ràng hơn và an toàn hơn cho việc chuyển đổi giữa các nhánh hoặc commit. Tên lệnh: `git switch` nghe cái tên thôi cũng đã phản ánh rõ ràng hơn về mục đích sử dụng, trong khi git checkout có nhiều mục đích hơn (như chuyển đổi nhánh, chuyển đổi commit, tạo nhánh mới, vv.), dễ gây nhầm lẫn hơn trong việc sử dụng. Cuối cùng là Master hãy chuyển thành Main.  
 
 ## Git Flow  
 ![alt text](./img/gitflow-hotfix-branch-diagram.jpg)  
-không nên sửa đổi file trên master
+> Tuyệt đối! các bạn không nên sửa đổi file trên nhánh Main(Master). Muốn làm feature mới thì hãy `git checkout` ra một nhánh mới rồi hẳn làm. Sau khi hoàn thành feature đó hãy merge vào nhánh Main.  
 
 
 [Luyện Git](https://learngitbranching.js.org/)
