@@ -21,8 +21,8 @@ _When: khi nào sử dụng_
 
 | Commands | How | What | When |
 | --- | --- | --- | --- |
-| clone | sdfsdfsdfsdfsdfsdfsdfsdf | sdfsdfsdffffffffffff | sdfsdfsdfsdfsdfsdfsdfsdfdddddđ |
-| branch | sdfsdfsfsdfsdfsdfsdf | dddddddddddddddddddddddddddd | ádasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasd |
+| clone | sdfsdfsdfsdfsdfsdfsdfsdf | sdfsdfsdffffffffffff | sdfsdfsdfsdfsdfs  dfsdfsdfdddddđ |
+| branch | sdfsdfsfsdfsdfsdfsdf | dddddddddddddddddddddddddddd | ádasdasdasdasdasdasdasdasdasdasdasd  asdasdasdasdasdasd |
 | Cell 1 | Cell 2 | Cell 1 | Cell 2 |
 | Cell 1 | Cell 2 | Cell 1 | Cell 2 |
 | Cell 1 | Cell 2 | Cell 1 | Cell 2 |
