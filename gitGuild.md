@@ -5,7 +5,7 @@ Tổng quan về git:
 Git dùng để quản lí mã nguồn, nó lưu trữ versions của mã code thông qua những cái log mà chúng ta đã commit và giúp dễ dàng revert khi có các code lỗi.  
 ![alt text](./img/git.png)  
 
-Dùng `git init` để tạo khởi tạo git, lần commit đầu tiên tôi gọi c0 (như hình trên) Git sẽ tạo một commit đầu tiên trong lịch sử của kho lưu trữ đó. Commit này thường được gọi là "commit khởi nguyên" hoặc "commit đầu tiên". Trong Git, commit đầu tiên này thể hiện trạng thái ban đầu của dự án và chứa thông tin về thư mục và tệp tin hiện có. 
+Dùng `git init` để tạo khởi tạo git, lần commit đầu tiên mình gọi c0 (như hình trên) Git sẽ tạo một commit đầu tiên trong lịch sử của kho lưu trữ đó. Commit này thường được gọi là "commit khởi nguyên" hoặc "commit đầu tiên". Trong Git, commit đầu tiên này thể hiện trạng thái ban đầu của dự án và chứa thông tin về thư mục và tệp tin hiện có. 
 
 Mỗi lần commit, git sẽ tạo ra một node. Các node liên kết với nhau bằng tham chiếu (reference). Các bạn cứ hiểu một node sẽ chứa các thông tin về sự thay đổi của dự án. Khi bạn tạo commit c1, git sẽ tự động ghi nhận thông tin về commit cha (c0) và lưu trữ tham chiếu đến commit cha (c0). Điều này cho phép Git theo dõi sự lịch sử của các commit và tạo ra một chuỗi các commit được liên kết với nhau theo trình tự thời gian. Thông qua các tham chiếu commit cha, Git cho phép bạn đi ngược lại trong lịch sử commit, từ đó khôi phục các phiên bản trước đó của dự án.  
 
@@ -30,6 +30,8 @@ Một số lệnh cơ bản thường dùng bao gồm: `git init`, `git clone`, 
 ## Git Flow  
 ![alt text](./img/gitflow-hotfix-branch-diagram.jpg)  
 > Tuyệt đối! các bạn không nên sửa đổi file trên nhánh Main(Master). Muốn làm feature mới thì hãy `git checkout` ra một nhánh mới rồi hẳn làm. Sau khi hoàn thành feature đó hãy merge vào nhánh Main.  
+ 
+Để quản lí một dự án hiệu quả PM sẽ tạo ra 5 nhánh như trình trên, mình sẽ thay thế nhánh `master` thành `main` để hợp với thuần phong mỹ tục hiện nay &#x1F600; . 
 
 
 [Luyện Git](https://learngitbranching.js.org/)
