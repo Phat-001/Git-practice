@@ -1,14 +1,12 @@
 # Hướng Dẫn Dùng Git
 **Hello anh em!**  
 <hr>  
-<center>Đoạn văn bản căn giữa.</center>  
 
-_hướng dẫn dùng git_  
+Git dùng để quản lí mã nguồn, nó lưu trữ versions của mã code thông qua những cái log mà chúng ta đã commit và giúp dễ dàng revert khi có các code lỗi.  
 
-*tải git*  
 
-`git he ge`  
-
+__  
+Một số lệnh cơ bản thường dùng bao gồm: `git init`, `git clone`, `git add`, `git commit`, `git push`, `git pull`, và `git merge`. 
 
 ## Git Flow  
 ![alt text](./img/gitflow-hotfix-branch-diagram.jpg)  
@@ -37,3 +35,6 @@ quản lí mã
 quan trọng nhất là lưu trữ versions của code thông qua những cái log mà chúng ta đã commit và giúp dễ dàng revert các code lỗi.
 
 không nên sửa đổi file trên master
+
+
+[Luyện git](https://learngitbranching.js.org/)
