@@ -7,12 +7,12 @@ Tổng quan về git:
 Git dùng để quản lí mã nguồn, nó lưu trữ versions của mã code thông qua những cái log mà chúng ta đã commit và giúp dễ dàng revert khi có các code lỗi.  
 ![alt text](./img/git.png)  
 
-Dùng `git init` để tạo khởi tạo git, lần commit đầu tiên tôi gọi C0 (như hình trên) Git sẽ tạo một commit đầu tiên trong lịch sử của kho lưu trữ đó. Commit này thường được gọi là "commit khởi nguyên" hoặc "commit đầu tiên". Trong Git, commit đầu tiên này thể hiện trạng thái ban đầu của dự án và chứa thông tin về thư mục và tệp tin hiện có.  
-mỗi commit được đại diện bởi một nút (node) và các nút được liên kết với nhau bằng các tham chiếu (references). Mỗi commit chứa thông tin về các thay đổi trong dự án, bao gồm các tệp tin và thư mục. Các tham chiếu giúp xác định mối quan hệ giữa các commit trong lịch sử. Trong Git, không có một commit cụ thể nào được coi là "root" của lịch sử commit. Thay vào đó, mỗi commit có thể có một hoặc nhiều commit cha (parent commits) và một hoặc nhiều commit con (child commits), tạo thành một cấu trúc cây ngược (inverted tree) trong DAG. Hãy nhìn hình trên lần nữa, nếu tôi có commit c1 thì nó reference tới commit c0. mỗi commit thông thường sẽ tham chiếu đến commit cha của nó. Khi bạn tạo một commit mới (c1), commit đó sẽ lưu trữ tham chiếu đến commit cha trước đó (c0). Commit cha của một commit được xác định bởi thông tin metadata trong commit. Khi bạn tạo commit c1, Git sẽ tự động ghi nhận thông tin về commit cha (c0) và lưu trữ tham chiếu đến commit cha đó. Điều này cho phép Git theo dõi sự lịch sử của các commit và tạo ra một chuỗi các commit được liên kết với nhau theo trình tự thời gian. Thông qua các tham chiếu commit cha, Git cho phép bạn đi ngược lại trong lịch sử commit, khám phá và khôi phục các phiên bản trước đó của dự án.
+Dùng `git init` để tạo khởi tạo git, lần commit đầu tiên tôi gọi c0 (như hình trên) Git sẽ tạo một commit đầu tiên trong lịch sử của kho lưu trữ đó. Commit này thường được gọi là "commit khởi nguyên" hoặc "commit đầu tiên". Trong Git, commit đầu tiên này thể hiện trạng thái ban đầu của dự án và chứa thông tin về thư mục và tệp tin hiện có. 
 
+Mỗi lần commit, git sẽ tạo ra một node. Các node liên kết với nhau bằng tham chiếu (reference). Các bạn cứ hiểu một node sẽ chứa các thông tin về sự thay đổi của dự án. Khi bạn tạo commit c1, git sẽ tự động ghi nhận thông tin về commit cha (c0) và lưu trữ tham chiếu đến commit cha (c0). Điều này cho phép Git theo dõi sự lịch sử của các commit và tạo ra một chuỗi các commit được liên kết với nhau theo trình tự thời gian. Thông qua các tham chiếu commit cha, Git cho phép bạn đi ngược lại trong lịch sử commit, từ đó khôi phục các phiên bản trước đó của dự án.  
 
+**Lưu ý nhỏ xíu:** _Trước phiên bản Git 2.23, để chuyển đổi (switch) giữa các nhánh hoặc commit trong Git, người dùng thường sử dụng lệnh `git checkout`. Tuy nhiên, từ phiên bản 2.23 trở đi, Git đã giới thiệu lệnh `git switch` nhằm mục đích rõ ràng hơn và an toàn hơn cho việc chuyển đổi giữa các nhánh hoặc commit. Tên lệnh: `git switch` nghe cái tên thôi cũng đã phản ánh rõ ràng hơn về mục đích sử dụng, trong khi git checkout có nhiều mục đích hơn (như chuyển đổi nhánh, chuyển đổi commit, tạo nhánh mới, vv.), dễ gây nhầm lẫn trong việc sử dụng. Cuối cùng là Master hay chuyển thành Main._
 
-__  
 Một số lệnh cơ bản thường dùng bao gồm: `git init`, `git clone`, `git add`, `git commit`, `git push`, `git pull`, và `git merge`. 
 
 ## Git Flow  
@@ -22,21 +22,17 @@ Một số lệnh cơ bản thường dùng bao gồm: `git init`, `git clone`, 
 
 ### Các commands thường hay sử dụng
 
-_How: cách sử dụng_  
+| Commands | Giải thích |
+| --- | --- |
+| `git init` | Lệnh này được sử dụng để khởi tạo một kho chứa Git mới trong thư mục hiện tại. Khi chạy `git init`, Git sẽ tạo ra một kho chứa trống để bạn có thể bắt đầu quản lý phiên bản mã nguồn. |
+| `git clone` | Lệnh này được sử dụng để sao chép (clone) một kho chứa Git từ một URL xa vào máy tính của bạn. Khi chạy `git clone`, Git sẽ tải về toàn bộ lịch sử và mã nguồn từ kho chứa từ xa và tạo ra một bản sao hoàn chỉnh trên máy tính của bạn. |
+| `git add [file path]` | Lệnh này được sử dụng để thêm một hoặc nhiều file vào vùng staging (vùng chuẩn bị) để chuẩn bị cho commit. Bằng cách chạy `git add`, bạn cho phép Git theo dõi các thay đổi trong file đã chỉ định. |
+| `git commit -m "[message]"` | Lệnh này tạo một commit mới với các thay đổi đã được thêm vào vùng staging. Bằng cách chạy `git commit`, bạn ghi lại trạng thái hiện tại của mã nguồn và gắn kèm một thông điệp mô tả cho commit đó. |
+| `git pull` | Lệnh này được sử dụng để lấy (pull) các commit mới nhất từ một kho chứa từ xa và tích hợp (merge) chúng vào nhánh hiện tại. Khi chạy `git pull`, Git tải về các commit mới nhất và tự động thực hiện quá trình merge để tích hợp nội dung mới vào dự án của bạn. |
+| `git merge [branch]` | Lệnh này được sử dụng để gộp các thay đổi từ một nhánh khác vào nhánh hiện tại. Khi chạy git merge, Git sẽ kết hợp (merge) các thay đổi từ nhánh được chỉ định vào nhánh hiện tại của bạn. |
+| `git push` | Lệnh này được sử dụng để đẩy (push) các commit đã tạo lên một kho chứa từ xa. Khi chạy `git push`, Git gửi các commit mới nhất từ nhánh hiện tại của bạn lên kho chứa từ xa để chia sẻ với người khác. |
+| `git rebase` | Lệnh trong Git được sử dụng để tái cấu trúc lịch sử commit trong một nhánh. Khi sử dụng `git rebase`, các commit trong nhánh hiện tại sẽ được chuyển đổi thành các commit mới dựa trên một commit gốc hoặc một nhánh khác. |
 
-_What: nó là gì_  
-
-_When: khi nào sử dụng_  
-
-| Commands | How | What | When |
-| --- | --- | --- | --- |
-| clone | sdfsdfsdfsdfsdfsdfsdfsdf | sdfsdfsdffffffffffff | sdfsdfsdfsdfsdfs  dfsdfsdfdddddđ |
-| branch | sdfsdfsfsdfsdfsdfsdf | dddddddddddddddddddddddddddd | ádasdasdasdasdasdasdasdasdasdasdasd  asdasdasdasdasdasd |
-| branch | sdfsdfsfsdfsdfsdfsdf | ddddddddddddddsdddddddddddddđ  5dddddddddddddd | ádasdasdasdasdasdasdasdasdasdasdasd  asdasdasdasdasdasd |
-| branch | sdfsdfsfsdfsdfsdfsdf | dddddddddddddddddddddddddddd | ádasdasdasdasdasdasdasdasdasdasdasd  asdasdasdasdasdasd |
-| Cell 1 | Cell 2 | Cell 1 | Cell 2 |
-| Cell 1 | Cell 2 | Cell 1 | Cell 2 |
-| Cell 1 | Cell 2 | Cell 1 | Cell 2 |
   
 quản lí mã
 quan trọng nhất là lưu trữ versions của code thông qua những cái log mà chúng ta đã commit và giúp dễ dàng revert các code lỗi.
