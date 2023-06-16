@@ -37,7 +37,7 @@ Trong Git Flow, nhánh `main` thường được sử dụng làm nhánh chính 
 
 Khi sử dụng Git Flow, công việc phát triển mới thường được thực hiện trên các nhánh khác như `develop` hoặc các nhánh tính năng (feature branches). Khi một tính năng hoặc một chuỗi các tính năng hoàn thành, chúng được merge vào nhánh `develop` để kiểm tra tích hợp và kiểm tra chất lượng để chuẩn bị merge vào nhánh `release`.  
 
-Sau khi hoàn thành việc phát triển từ nhánh `develop` tiến hành merge vào nhánh `release`, bạn thực hiện các công việc cuối cùng như kiểm tra, kiểm tra tích hợp, kiểm tra hệ thống và các chỉnh sửa cuối cùng trước khi phát sản phẩm.
+Sau khi hoàn thành việc phát triển từ nhánh `develop` tiến hành merge vào nhánh `release`, ở nhánh này bạn thực hiện các công việc cuối cùng như kiểm tra, kiểm tra tích hợp, kiểm tra hệ thống và các chỉnh sửa cuối cùng trước khi đưa sản phẩm. Sau khi tiến hành kiểm tra kỹ lưỡng, merge nhánh `release` vào nhánh `main` và `develop`. Merge vào nhánh `develop` để lữu trữ version code mới nhất của sản phẩm chuẩn bị cho việc phát triển version tiếp theo của sản phẩm (nếu có).  
 
 Sau đó, khi sản phẩm chuẩn bị để triển khai, nhánh `release` sẽ được merge vào nhánh `main`. Việc này đồng nghĩa với việc những thay đổi mới nhất trên `release` được đưa vào nhánh main và sẵn sàng để triển khai lên môi trường sản phẩm. Quy trình này giúp tách riêng phần phát triển và tích hợp từ phần triển khai và triển khai sản phẩm. Nhánh `main` trong Git Flow thường được coi là nhánh ổn định và an toàn để xây dựng sản phẩm và triển khai cho người dùng cuối.  
 
