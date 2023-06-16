@@ -24,7 +24,7 @@ Một số lệnh cơ bản thường dùng bao gồm: `git init`, `git clone`, 
 | `git push` | Lệnh này được sử dụng để đẩy (push) các commit đã tạo lên một kho chứa từ xa. Khi chạy `git push`, Git gửi các commit mới nhất từ nhánh hiện tại của bạn lên kho chứa từ xa để chia sẻ với người khác. |
 | `git rebase` | Lệnh trong Git được sử dụng để tái cấu trúc lịch sử commit trong một nhánh. Khi sử dụng `git rebase`, các commit trong nhánh hiện tại sẽ được chuyển đổi thành các commit mới dựa trên một commit gốc hoặc một nhánh khác. |
 
-**Lưu ý nhỏ xíu xiu:** 
+**Thay đổi nhỏ:** 
 >Trước phiên bản Git 2.23, để chuyển đổi (switch) giữa các nhánh hoặc commit trong Git, người dùng thường sử dụng lệnh `git checkout`. Tuy nhiên, từ phiên bản 2.23 trở đi, Git đã giới thiệu lệnh `git switch` nhằm mục đích rõ ràng hơn và an toàn hơn cho việc chuyển đổi giữa các nhánh hoặc commit. Tên lệnh: `git switch` nghe cái tên thôi cũng đã phản ánh rõ ràng hơn về mục đích sử dụng, trong khi git checkout có nhiều mục đích hơn (như chuyển đổi nhánh, chuyển đổi commit, tạo nhánh mới, vv.), dễ gây nhầm lẫn hơn trong việc sử dụng. Cuối cùng là Master hãy chuyển thành Main.  
 
 ## Git Flow  
@@ -33,7 +33,11 @@ Một số lệnh cơ bản thường dùng bao gồm: `git init`, `git clone`, 
  
 Để quản lí một dự án hiệu quả PM sẽ tạo ra 5 nhánh như trình trên, mình sẽ thay thế nhánh `master` thành `main` để hợp với thuần phong mỹ tục hiện nay &#x1F600;.  
 
-Dùng `git init` để khởi tạo git từ nhánh `main`, bạn không nên chỉnh sửa gì lên nhánh này. Mà hãy `git checkout` ra một nhánh mới gọi là nhánh `develop`, bạn và các team member sẽ phát triển dự án lên nhánh này, và tất nhiên nhánh này bạn cũng không nên chỉnh sửa mà `git checkout` ra một nhánh khác gọi là nhánh `feature`. PM giao task cho bạn
+Trong Git Flow, nhánh main thường được sử dụng làm nhánh chính để triển khai (deploy) sản phẩm (product) hoặc phiên bản ổn định của dự án. Nhánh main thường chứa mã nguồn ổn định và được coi là phiên bản chính thức của sản phẩm.  
+
+Khi sử dụng Git Flow, công việc phát triển mới thường được thực hiện trên các nhánh khác như develop hoặc các nhánh tính năng (feature branches). Khi một tính năng hoặc một chuỗi các tính năng hoàn thành, chúng được merge vào nhánh develop để kiểm tra tích hợp và kiểm tra chất lượng.  
+
+Sau đó, khi sản phẩm được chuẩn bị để triển khai, nhánh develop sẽ được merge vào nhánh main. Việc này đồng nghĩa với việc những thay đổi mới nhất trên develop được đưa vào nhánh main và sẵn sàng để triển khai lên môi trường sản phẩm.Quy trình này giúp tách riêng phần phát triển và tích hợp từ phần triển khai và triển khai sản phẩm. Nhánh main trong Git Flow thường được coi là nhánh ổn định và an toàn để xây dựng sản phẩm và triển khai cho người dùng cuối.  
 
 
 [Luyện Git](https://learngitbranching.js.org/)
