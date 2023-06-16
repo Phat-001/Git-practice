@@ -31,13 +31,20 @@ Một số lệnh cơ bản thường dùng bao gồm: `git init`, `git clone`, 
 ![alt text](./img/gitflow-hotfix-branch-diagram.jpg)  
 > Tuyệt đối! các bạn không nên sửa đổi file trên nhánh Main(Master). Muốn làm feature mới thì hãy `git checkout` ra một nhánh mới rồi hẳn làm. Sau khi hoàn thành feature đó hãy merge vào nhánh Main.  
  
-Để quản lí một dự án hiệu quả PM sẽ tạo ra 5 nhánh như trình trên, mình sẽ thay thế nhánh `master` thành `main` để hợp với thuần phong mỹ tục hiện nay &#x1F600;.  
+Để quản lí một dự án hiệu quả PM sẽ tạo ra 5 nhánh như hình trên, mình sẽ thay thế nhánh `master` thành `main` để hợp với thuần phong mỹ tục hiện nay &#x1F600;.  
 
-Trong Git Flow, nhánh main thường được sử dụng làm nhánh chính để triển khai (deploy) sản phẩm (product) hoặc phiên bản ổn định của dự án. Nhánh main thường chứa mã nguồn ổn định và được coi là phiên bản chính thức của sản phẩm.  
+Trong Git Flow, nhánh `main` thường được sử dụng làm nhánh chính để triển khai (deploy) sản phẩm (product) hoặc phiên bản ổn định của dự án. Nhánh main thường chứa mã nguồn ổn định và được coi là phiên bản chính thức của sản phẩm.  
 
-Khi sử dụng Git Flow, công việc phát triển mới thường được thực hiện trên các nhánh khác như develop hoặc các nhánh tính năng (feature branches). Khi một tính năng hoặc một chuỗi các tính năng hoàn thành, chúng được merge vào nhánh develop để kiểm tra tích hợp và kiểm tra chất lượng.  
+Khi sử dụng Git Flow, công việc phát triển mới thường được thực hiện trên các nhánh khác như `develop` hoặc các nhánh tính năng (feature branches). Khi một tính năng hoặc một chuỗi các tính năng hoàn thành, chúng được merge vào nhánh `develop` để kiểm tra tích hợp và kiểm tra chất lượng để chuẩn bị merge vào nhánh `release`.  
 
-Sau đó, khi sản phẩm được chuẩn bị để triển khai, nhánh develop sẽ được merge vào nhánh main. Việc này đồng nghĩa với việc những thay đổi mới nhất trên develop được đưa vào nhánh main và sẵn sàng để triển khai lên môi trường sản phẩm.Quy trình này giúp tách riêng phần phát triển và tích hợp từ phần triển khai và triển khai sản phẩm. Nhánh main trong Git Flow thường được coi là nhánh ổn định và an toàn để xây dựng sản phẩm và triển khai cho người dùng cuối.  
+Sau khi hoàn thành việc phát triển từ nhánh `develop` tiến hành merge vào nhánh `release`, bạn thực hiện các công việc cuối cùng như kiểm tra, kiểm tra tích hợp, kiểm tra hệ thống và các chỉnh sửa cuối cùng trước khi phát sản phẩm.
+
+Sau đó, khi sản phẩm chuẩn bị để triển khai, nhánh `release` sẽ được merge vào nhánh `main`. Việc này đồng nghĩa với việc những thay đổi mới nhất trên `release` được đưa vào nhánh main và sẵn sàng để triển khai lên môi trường sản phẩm. Quy trình này giúp tách riêng phần phát triển và tích hợp từ phần triển khai và triển khai sản phẩm. Nhánh `main` trong Git Flow thường được coi là nhánh ổn định và an toàn để xây dựng sản phẩm và triển khai cho người dùng cuối.  
+
+Sản phẩm đang triển khai cho người dùng cuối sử dụng chẳng may phát sinh ra lỗi (bug), ta sẽ tạo một nhánh `hotfix` từ nhánh `main` để xử lý và vá các lỗi gấp cần phải sửa ngay trên phiên bản sản phẩm đang được triển khai. Nhánh `hotfix` cho phép bạn tách riêng công việc sửa lỗi khẩn cấp và triển khai các thay đổi liên quan mà không ảnh hưởng đến quy trình phát triển đang diễn ra trên nhánh `develop`.  
+
+Khi các sửa đổi đã được hoàn thành và kiểm tra, merge nhánh `hotfix` vào cả nhánh `main` và `develop`. Merge vào nhánh `main` đảm bảo rằng các thay đổi sửa lỗi được áp dụng ngay vào phiên bản sản phẩm chính đang được triển khai. Merge vào nhánh `develop` đảm bảo rằng các sửa đổi cũng phải được tích hợp vào quy trình phát triển sản phẩm đang được triển khai trên nhánh `develop` để lần release tiếp không bị lỗi.
+
 
 
 [Luyện Git](https://learngitbranching.js.org/)
