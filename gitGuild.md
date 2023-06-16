@@ -43,7 +43,7 @@ Sau đó, khi sản phẩm chuẩn bị để triển khai, nhánh `release` s�
 
 Sản phẩm đang triển khai cho người dùng cuối sử dụng chẳng may phát sinh ra lỗi (bug), ta sẽ tạo một nhánh `hotfix` từ nhánh `main` để xử lý và vá các lỗi gấp cần phải sửa ngay trên phiên bản sản phẩm đang được triển khai. Nhánh `hotfix` cho phép bạn tách riêng công việc sửa lỗi khẩn cấp và triển khai các thay đổi liên quan mà không ảnh hưởng đến quy trình phát triển đang diễn ra trên nhánh `develop`.  
 
-Khi các sửa đổi đã được hoàn thành và kiểm tra, merge nhánh `hotfix` vào cả nhánh `main` và `develop`. Merge vào nhánh `main` đảm bảo rằng các thay đổi sửa lỗi được áp dụng ngay vào phiên bản sản phẩm chính đang được triển khai. Merge vào nhánh `develop` đảm bảo rằng các sửa đổi cũng phải được tích hợp vào quy trình phát triển sản phẩm đang được triển khai trên nhánh `develop` để lần release tiếp không bị lỗi.
+Khi các sửa đổi đã được hoàn thành và kiểm tra, merge nhánh `hotfix` vào cả nhánh `main` và `develop`. Merge vào nhánh `main` đảm bảo rằng các thay đổi sửa lỗi được áp dụng ngay vào phiên bản sản phẩm chính đang được triển khai. Merge vào nhánh `develop` đảm bảo rằng các sửa đổi cũng phải được tích hợp vào quy trình phát triển sản phẩm đang được triển khai trên nhánh `develop` để lần release tiếp theo không bị lỗi.
 
 
 
